@@ -1,0 +1,60 @@
+<div class="fluid-container">
+
+
+    <nav class="navbar navbar-expand-lg navbar-fixed-top navbar-light" style="background-color:rgb(47, 179, 227);" >
+      <a class="navbar-brand" href="" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: bolder;">
+        TweetApp <img src="../assets/tweetFavi.png" height="35px" width="35px"> </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse " id="navbarSupportedContent" >
+        <ul class="navbar-nav ml-auto" *ngIf="!isUserLoggedIn; else loggedIn">
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/home']" routerLinkActive="active" >Home</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link"  [routerLink]="['/login']" routerLinkActive="active"  >Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  [routerLink]="['/register']" routerLinkActive="active"  >Register</a>
+          </li>
+          
+        </ul>
+       
+        <ng-template #loggedIn>
+          <ul class="navbar-nav ml-auto" >
+            <li class="nav-item mr-3">
+             <a class="nav-link active">
+              <img *ngIf="imageUrl==null" src="../assets/gravatar.png" class="gravatar-small" alt="profile_pic">
+              <img *ngIf="imageUrl!=null" [src]="imageUrl" class="gravatar-small" alt="profile_pic">      
+              Hi @{{loggedUsername}},</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link"  [routerLink]="['/new']" routerLinkActive="active"  >New Tweet</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"  [routerLink]="['/users/']" routerLinkActive="active"  >View Users</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"  [routerLink]="['/tweets']" routerLinkActive="active"  >View Tweets</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"  [routerLink]="['/reset-password']" routerLinkActive="active"  >Reset Password</a>
+            </li>
+            <li class="nav-item">
+              <button class="btn btn-danger navbar-btn" (click)="logOut()"  [routerLink]="['/login']"  >Logout</button>
+            </li>
+          </ul>
+
+         
+        </ng-template>
+        
+
+      </div>
+    </nav>
+    <div class="container">
+      <router-outlet></router-outlet> 
+    </div>
+      
+</div>

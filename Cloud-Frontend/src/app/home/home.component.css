@@ -1,0 +1,10 @@
+svg{
+	height: 100vh;
+	float:right;
+}
+
+.btn {
+    background-color: rgb(47, 179, 227);
+    color: white;
+    padding: auto;
+}

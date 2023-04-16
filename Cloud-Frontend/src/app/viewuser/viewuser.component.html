@@ -1,0 +1,19 @@
+<div class="card m-3 text-black" style="background-color: white;" *ngIf="user!=null">
+    <div class="card-hearder  ">
+        <div class="row">
+            <h4 class="col">User :  @{{user.username}}</h4>
+            <button class="col-1 close-btn" (click)="close()">
+                <img src="../../assets/close-btn.png">
+            </button>
+        </div>
+        
+
+    </div>
+    <div class="card-body">
+        <p>First Name : {{user.firstName}}</p>
+        <p>Last Name : {{user.lastName}}</p>
+        <p>Email : {{user.email}}</p>
+        <!-- <p>Contact Number : {{user.contactNumber}}</p> -->
+    </div>
+    
+</div>

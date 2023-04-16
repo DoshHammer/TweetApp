@@ -1,0 +1,25 @@
+.content-card{
+padding-top:20px;
+}
+
+.content-body{
+    display: flex;
+    padding:10px 20px 10px 20px;
+
+}
+
+.left{
+    width: max-content;
+    display: block;
+    margin-left: auto;
+}
+
+.card{
+    margin: 10px;
+}
+
+.btn {
+    background-color: rgb(47, 179, 227);
+    color: white;
+    padding: auto;
+}

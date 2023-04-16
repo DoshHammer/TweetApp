@@ -1,0 +1,62 @@
+.identity {
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    font-size: x-large;
+}
+
+.new-tweet-card{
+    width: 75%;
+    margin-left: 20%;
+    height: 250px;
+}
+
+#tweetBox{
+    display: block;
+    width: 80%;
+    margin: auto;
+    font-size: medium;
+}
+
+.label{
+    width: 80%;
+    margin: 10px 0 10px 10%;
+}
+
+#tag{
+    width: 80%;
+    margin: auto;
+}
+
+.tweet-limit{
+    position: relative;
+    width: 80%;
+    margin: auto;
+    text-align-last: end;
+    color: blue;
+    top: -31px;
+    right: 12px;
+    font-size: larger;
+}
+
+.tag{
+    background-color: lightblue;
+    display: inline-block;
+    padding: 10px;
+    color: darkblue;
+    margin: 5px;
+    border-radius: 16px;
+}
+
+.btn1 {
+    background-color: #065096;
+    color: white;
+    border: white;
+    padding: auto;
+    height: auto;
+    width: auto;
+}
+
+.font-fam {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

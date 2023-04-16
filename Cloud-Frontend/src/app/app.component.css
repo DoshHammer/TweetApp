@@ -1,0 +1,10 @@
+.navbar-nav {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    color: black;
+}
+
+.navbar-brand {
+    height: 20px;
+    width: 20px;
+}

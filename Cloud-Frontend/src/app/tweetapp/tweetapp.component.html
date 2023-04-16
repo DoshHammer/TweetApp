@@ -1,0 +1,42 @@
+<div class="card m-3" *ngIf="tweet!=null">
+    <div class="card-hearder">
+        <div class="row">
+            <h5 class="col">Tweet : {{tweet.tweetText}}</h5>
+             <button class="col-1 close-btn" (click)="close()">
+                <img src="../../assets/close.svg">
+             </button>
+        </div>
+    </div>
+  
+    <div class="card-body">
+        <h6>User :  @{{tweet.username}}</h6>
+        <h6>Likes : {{tweet.likes.length}}</h6>
+        <h6>Replies : {{tweet.comments.length}}</h6>
+        <!-- <h6>Tags : <small class="alert-warning m-2 p-2" *ngFor="let tag of tweet.tags">#{{tag}}</small></h6> -->
+        <h6>TweetDate : {{tweet.tweetDate}}</h6>
+        <div>
+            <!--Like Button-->
+            <button class="btn" title="Like" (click)="likeTweet(tweet)">
+                <img src="../../assets/bxs_like.svg">
+            </button>
+            <!-- <button class="btn btn-dark" (click)="likeTweet(false)">Dislike</button> -->
+            <button class="btn" title="Edit Tweet" (click)="editTweet()" *ngIf="tweet.username == currentUser">
+                <img src="../../assets/ant-design_edit-filled.svg">
+            </button>
+            <button class="btn" title="Delete Tweet" (click)="deleteTweet()" *ngIf="tweet.username == currentUser">
+                <img src="../../assets/ant-design_delete-filled.svg">
+            </button>
+        </div>
+        
+
+        <!-- <div class="card d-flex text-dark reply-box" *ngFor="let reply of tweet.comments">
+            <h6>@{{reply.username}}</h6>  <h6 class="ml-5">{{reply.comment}}</h6> <div class="space"></div>
+            <h6>{{reply.comment}}</h6>
+        </div> -->
+    </div>
+    <div class="d-flex">
+        <textarea class="reply" #comment [(ngModel)]="currentComment" name="comment" id="comment" cols="30" rows="2" maxlength="144"></textarea>
+        <button [disabled]="((144-comment.value.length < 0) || (comment.value.length==0))? true:false" class="btn reply-btn" (click)="replyToTweet(comment.value)">Reply</button>
+    </div>
+    
+</div>

@@ -1,0 +1,44 @@
+/* You can add global styles to this file, and also import other style files */
+.content-card{
+    width: 90%;
+    min-height: 650px;
+    margin: auto;
+    background-color: white;
+}
+
+.gravatar-small{
+    width: 20px;
+    height: 20px;
+    border-radius: 23px;
+}
+
+.gravatar-big{
+    width: 100px;
+    height: 100px;
+    border-radius: 60px;
+}
+
+.danger{
+    color:#ff0016;
+}
+
+.danger-box{
+    border: 2px solid;
+    border-color: #ff0016;
+}
+
+.custom-link,.custom-link:visited,.custom-link:hover{
+    color:#a0ceff;
+    text-decoration: none;
+}
+
+.xicon-small{
+    width: 16px;
+    height: 16px;
+    border-radius: 25px;
+    margin-left: 3px;
+}
+
+body{
+    background-color: ivory;
+}

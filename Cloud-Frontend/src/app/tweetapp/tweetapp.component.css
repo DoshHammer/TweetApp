@@ -1,0 +1,43 @@
+.card{
+    padding: 10px 20px 10px 20px;
+}
+.card m-3 {
+    background-color: white;
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.reply{
+    width: 72%;
+    margin: auto;
+}
+.reply-btn{
+    background-color: #065096;
+    color: white;
+    width: 20%;
+    margin-right: 20px;
+}
+
+.close-btn{
+    background-color: white;
+    border: white;
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+
+button img {
+    height: 28px;
+    width: 45px;
+}
+
+.space{
+    flex:1 1;
+}
+
+.reply-box{
+    flex-direction: inherit;
+    margin: 12px 0px;
+}

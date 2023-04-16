@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="login-card">
+        
+        <div class="card text-grey">
+        <div class="card-header text-center"><h2>Login</h2></div>
+        <div class="card-body">
+    
+          <div class="card-content">
+            <form [formGroup]="loginform">
+               <div class="form-group">
+                <label for="username"> Username</label>
+                <input  [ngClass]="{'danger-box': submitted && f.username.errors}" (keyup)="resetForm()" type="text" class="form-control" formControlName="username" name="username" id="username" autocomplete="off">
+                <div *ngIf="submitted && f.username.errors" class="danger">
+                  <medium *ngIf="f.username.errors.required" >User name is required</medium>
+                </div>
+               </div>
+               <div class="form-group">
+                <label for="password"> Password</label>
+                <input [ngClass]="{'danger-box': submitted && (f.password.errors)}" (keyup)="resetForm()" type="password" class="form-control" formControlName="password" name="password" id="password" autocomplete="off">
+                <div *ngIf="submitted && (f.password.errors)" class="danger">
+                  <medium *ngIf="f.password.errors?.required" >Password is required</medium>
+                </div>
+               </div>
+
+               <div class="form-group text-center ">
+                   <button (click)="formSubmit()" class="btn btn-submit text-white" style="background-color: rgb(29,155,200);">
+                     <span>Login</span>
+                   </button>
+               </div>
+               
+            </form>
+            <div class="alert alert-danger" *ngIf="submitted && error">
+              {{errormsg}}
+            </div>
+            <div class="alert alert-success" style="background-color: white;" *ngIf="submitted && success">
+              {{successmsg}}
+            </div>
+          </div>
+          
+          
+        </div>
+      </div>
+    </div>
+</div>

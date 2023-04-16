@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="content-card ">
+        <app-viewuser *ngIf="userSelected" [user]="selectedUser" (closeUser)="closeUser()"></app-viewuser>
+        
+        <div class="card" *ngFor="let user of userNameList">
+            <div class="content-body">
+                <h3>@{{user.username}}</h3>
+                <div class="left">
+                    <button class="btn mr-3" [routerLink]="['/userTweets/'+user.username]" (click)="selectUser(user)">View Tweets</button>
+
+                    <button class="btn" (click)="selectUser(user)">View User</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

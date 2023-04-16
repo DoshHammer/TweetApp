@@ -1,0 +1,16 @@
+.register-card{
+    width: 50%;
+    margin:auto;
+    margin-top: 50px;
+    /* margin-bottom: 50px; */
+}
+.card-header {
+    background-color: rgb(29,155,200);
+    color: white;
+}
+.bg-color{
+    background-color: white;
+}
+.form-group {
+    color: black;
+}
